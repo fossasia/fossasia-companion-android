@@ -4,9 +4,7 @@ Advanced native Android schedule browser application for the [FOSSASIA](http://f
 
 This is build upon the [FOSDEM Companion For android](https://github.com/cbeyls/fosdem-companion-android). It uses loaders and fragments extensively and is backward compatible up to Android 2.1 thanks to the support library.
 
-To get more information and install the app, look at the [Google Play Store](https://play.google.com/store/apps/details?id=be.digitalia.fosdem) page.
-
-The name FOSDEM and the gear logo are registered trademarks of FOSDEM VZW. Used with permission.
+To get more information and install the app, look at the [Google Play Store](https://play.google.com/store/apps/details?id=org.fossasia) page.
 
 ## How to build
 
@@ -34,7 +32,6 @@ The result apk file will be placed in ```app/build/outputs/apk/```.
 * Christophe Beyls
 * Abhishek Batra
 * Manan Wason
-* Pratik Todi
 * Mario Behling
 * Tymon Radzik
-
+* Pratik Todi
