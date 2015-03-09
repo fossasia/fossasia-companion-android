@@ -15,7 +15,7 @@
     <string name="events_download_empty">No new events found</string>
 
     <plurals name="events_download_completed">
-        <item quantity="one">Completed dcownloading %1$d event</item>
+        <item quantity="one">Completed downloading %1$d event</item>
         <item quantity="other">Completed downloading %1$d events</item>
     </plurals>
 
