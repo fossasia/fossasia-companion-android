@@ -15,7 +15,7 @@
     <string name="events_download_empty">No new events found</string>
 
     <plurals name="events_download_completed">
-        <item quantity="one">Completed downloading %1$d event</item>
+        <item quantity="one">Completed dcownloading %1$d event</item>
         <item quantity="other">Completed downloading %1$d events</item>
     </plurals>
 
@@ -116,8 +116,7 @@
     <string name="about">About</string>
     <string name="about_text">Programmed by <a href="http://www.digitalia.be/">Christophe Beyls</a>.
 \n
-\nLicensed under the Apache License, version 2.0. Source available on <a href="https://github.com/cbeyls/fosdem-companion-android">GitHub</a>.
-\nThe name FOSDEM and the gear logo are registered trademarks of FOSDEM VZW.  Used with permission.
+\nLicensed under the Apache License, version 2.0. Source available on <a href="https://github.com/fossasia/fossasia-companion-android">GitHub</a>.
 \n
 \n<small>This application makes use of the following libraries:
 \n- <a href="http://developer.android.com/tools/support-library/">Android Support Library</a><i> by The Android Open Source Project</i>\n- <a href="http://viewpagerindicator.com/">ViewPagerIndicator</a><i> by Jake Wharton</i>\n- <a href="https://github.com/chrisbanes/PhotoView">PhotoView</a><i> by Chris Banes</i>\n- <a href="https://android.googlesource.com/platform/frameworks/volley">Volley</a><i> by AOSP</i></small></string>
