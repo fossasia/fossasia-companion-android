@@ -1,7 +1,5 @@
 package org.fossasia.utils;
 
-import android.util.Log;
-
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
