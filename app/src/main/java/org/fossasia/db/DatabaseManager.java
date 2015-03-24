@@ -660,7 +660,6 @@ public class DatabaseManager {
         Venue ven = null;
         Cursor cursor = helper.getReadableDatabase().rawQuery(String.format(query, DatabaseHelper.TABLE_NAME_VENUE, track), null);
         if (cursor.moveToFirst()) {
-            //tract TEXT, venue TEXT, map TEXT, room TEXT, link TEXT, address TEXT, how_to_reach TEXT        }
             String venue = cursor.getString(1);
             String map = cursor.getString(2);
             String room = cursor.getString(3);

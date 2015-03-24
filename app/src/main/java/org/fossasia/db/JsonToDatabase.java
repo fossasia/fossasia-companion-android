@@ -56,9 +56,7 @@ public class JsonToDatabase {
 
 
     public void startDataDownload() {
-//        fetchKeySpeakers(FossasiaUrls.KEY_SPEAKER_URL);
-//        fetchSchedule(FossasiaUrls.SCHEDULE_URL);
-//        fetchSpeakerEventRelation(FossasiaUrls.SPEAKER_EVENT_URL);
+
         fetchTracks(FossasiaUrls.TRACKS_URL);
         startTrackUrlFetch(FossasiaUrls.VERSION_TRACK_URL);
     }
@@ -220,7 +218,7 @@ public class JsonToDatabase {
                                 .getString("v");
                         String logData = "First Name: %s\nLast Name: %s\nDate: %s\nTime: %s\nOrganization: %s\nEmail: %s\nBlog: %s\nTwitter: %s\nType Of Proposal: %s\nTopic Name:%s\nTrack: %s\nAbstarct: %s\nDescription: %s\nURL: %s";
                         logData = String.format(logData, firstName, lastName, date, time, organization, email, blog, twitter, typeOfProposal, topicName, field, proposalAbstract, description, url);
-//                        Log.d(TAG, logData);
+
                         int id2 = id + i;
                         if (date.equals("") || firstName.equals("") || time.equals("") || topicName.equals("")) {
                             continue;

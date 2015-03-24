@@ -142,11 +142,6 @@ public class SpeakerAdapter extends BaseAdapter {
         return row;
     }
 
-//    @Override
-//    public boolean isEnabled(int position) {
-//        return false;
-//    }
-
     public static class SpeakerHolder {
         TextView name;
         TextView designation;
