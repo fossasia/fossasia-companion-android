@@ -120,9 +120,6 @@ public class ScheduleFragment extends Fragment {
     }
 
     private void launchDirections() {
-        // Build intent to start Google Maps directions
-//        String uri = String.format(Locale.US,
-//                "https://www.google.com/maps/search/%1$s/@%2$f,%3$f,17z
 
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com.sg/maps/place/Biopolis/@1.304256,103.79179,16z/data=!4m2!3m1!1s0x0:0x9965b36cbf8d88c3"));
 

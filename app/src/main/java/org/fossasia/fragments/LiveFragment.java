@@ -24,11 +24,6 @@ public class LiveFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_live, container, false);
-//
-//        ViewPager pager = (ViewPager) view.findViewById(R.id.pager);
-//        pager.setAdapter(livePagerAdapter);
-//        SlidingTabLayout slidingTabs = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
-//        slidingTabs.setViewPager(pager);
 
         return view;
     }

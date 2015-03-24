@@ -30,6 +30,7 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -116,7 +117,6 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
         };
         drawerToggle.setDrawerIndicatorEnabled(true);
         drawerLayout.setDrawerListener(drawerToggle);
-        // Disable drawerLayout focus to allow trackball navigation.
         // We handle the drawer closing on back press ourselves.
         drawerLayout.setFocusable(false);
 
@@ -260,12 +260,17 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
                     return true;
                 }
             case R.id.refresh:
-//                startDownloadSchedule();
+                startDownloadSchedule();
                 // TODO: resolve this
                 Toast.makeText(getApplication(), "Updating database", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return false;
+    }
+
+    private void startDownloadSchedule() {
+        startActivity(new Intent(MainActivity.this, SplashActivity.class));
+        Log.d("Refresh Button", " Refresh button clicked");
     }
 
 
@@ -307,8 +312,6 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
     private enum Section {
         TRACKS(TracksListFragment.class, R.string.menu_tracks, R.drawable.ic_event_grey600_24dp, false),
         BOOKMARKS(BookmarksListFragment.class, R.string.menu_bookmarks, R.drawable.ic_bookmark_grey600_24dp, false),
-        //        LIVE(LiveFragment.class, R.string.menu_live, R.drawable.ic_play_circle_outline_grey600_24dp, false),
-//        KEY_SPEAKERS(KeySpeakerFragment.class, R.string.menu_key_speakers, R.drawable.ic_people_grey600_24dp, false),
         SPEAKERS(SpeakerFragment.class, R.string.menu_speakers, R.drawable.ic_people_grey600_24dp, false),
         MAP(MapFragment.class, R.string.menu_map, R.drawable.ic_map_grey600_24dp, false);
 
@@ -416,7 +419,6 @@ public class MainActivity extends ActionBarActivity implements ListView.OnItemCl
             int backgroundColor;
             if (section == currentSection) {
                 // Special color for the current section
-                //sectionTitle.setSpan(new StyleSpan(Typeface.BOLD), 0, sectionTitle.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 sectionTitle.setSpan(new ForegroundColorSpan(currentSectionForegroundColor), 0, sectionTitle.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 // We need to mutate the drawable before applying the ColorFilter, or else all the similar drawable instances will be tinted.
                 sectionIcon.mutate().setColorFilter(currentSectionForegroundColor, PorterDuff.Mode.SRC_IN);
