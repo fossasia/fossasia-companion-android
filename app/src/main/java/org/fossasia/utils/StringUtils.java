@@ -136,7 +136,13 @@ public class StringUtils {
         if (sTime != null) {
             sTime = sTime.replaceAll(" ", "");
             String amPm = sTime.substring(Math.max(sTime.length() - 2, 0));
-            String time = sTime.substring(0, sTime.length() - 2);
+            String time ;
+
+            if(sTime.length() > 7 && sTime.substring(0,7).matches("[a-zA-Z]{5}[0-9]{2}"))
+                time = sTime.substring(7, sTime.length() - 2);
+            else
+                time = sTime.substring(0, sTime.length() - 2);
+
             String[] hrMin = time.split(":");
             Calendar cal = Calendar.getInstance();
             String[] date = sDate.split(" ");
